@@ -20,9 +20,12 @@ class Server(BaseHTTPRequestHandler):
             'Authorization': 'token ' + 'YOUR_TOKEN'
         }
         data = requests.get(
-            url='https://api.github.com/repos/robineinbox/web-homework/contents/homework_1/html/index.html'
+            url='https://github.com/robineinbox/dz_19.1/blob/main/dz_19.1/index.html'
         )
-        html_data = data.text
+
+
+        # html_data = data.text
+        html_data = str(data)
         return html_data
 
     def do_GET(self):
